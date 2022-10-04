@@ -10,7 +10,7 @@ namespace UnitTests
         public void TestLength()
         {
 
-            IList<int> list = new LinkedList<int>();
+            PracticeExercise2.IList<int> list = new LinkedList<int>();
 
             Assert.AreEqual(0, list.Length);
 
