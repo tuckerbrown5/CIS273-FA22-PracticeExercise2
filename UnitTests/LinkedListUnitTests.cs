@@ -50,12 +50,9 @@ namespace UnitTests
         [TestMethod]
         public void TestFirst()
         {
-            PracticeExercise2.IList<int> list = new PracticeExercise2.LinkedList<int>();
-
-            Assert.ThrowsException<NullReferenceException>(() =>
-            {
-                int i = list.First;
-            });
+            PracticeExercise2.IList<int?> list = new PracticeExercise2.LinkedList<int?>();
+            int? nullValue = list.First;
+            Assert.IsNull(nullValue);
 
             for (int i = 0; i < 10; i++)
             {
@@ -76,12 +73,9 @@ namespace UnitTests
         [TestMethod]
         public void TestLast()
         {
-            PracticeExercise2.IList<int> list = new PracticeExercise2.LinkedList<int>();
-
-            Assert.ThrowsException<NullReferenceException>(() =>
-            {
-                int i = list.Last;
-            });
+            PracticeExercise2.IList<int?> list = new PracticeExercise2.LinkedList<int?>();
+            int? nullValue = list.Last;
+            Assert.IsNull(nullValue);
 
             list.Append(0);
 
