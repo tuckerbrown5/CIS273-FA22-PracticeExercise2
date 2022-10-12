@@ -198,7 +198,7 @@ namespace UnitTests
             list.InsertAt(62, list.Length - 1);
             Assert.AreEqual("[42,0,1,52,2,3,62,4]", list.ToString().Replace(" ", ""));
 
-            list.InsertAt(72, list.Length );
+            list.InsertAt(72, list.Length);
             Assert.AreEqual("[42,0,1,52,2,3,62,4,72]", list.ToString().Replace(" ", ""));
 
 
@@ -391,7 +391,12 @@ namespace UnitTests
 
             Assert.AreEqual(45, list.Get(45));
             Assert.AreEqual(10, list.Get(10));
+
+
+            Assert.ThrowsException<IndexOutOfRangeException>(() =>
+            {
+                list.Get(142);
+            });
         }
     }
 }
-
